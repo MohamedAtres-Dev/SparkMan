@@ -4,7 +4,23 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
+    #region Monobehaviour
+
+    private void OnEnable()
+    {
+        PlayerInputManager.onSwipeUp += OnSwipeUp;
+        PlayerInputManager.onSwipeDown += OnSwipeDown;
+        PlayerInputManager.onSwipeLeft += OnSwipeLeft;
+        PlayerInputManager.onSwipeRight += OnSwipeRight;
+    }
+
+    private void OnDisable()
+    {
+        PlayerInputManager.onSwipeUp -= OnSwipeUp;
+        PlayerInputManager.onSwipeDown -= OnSwipeDown;
+        PlayerInputManager.onSwipeLeft -= OnSwipeLeft;
+        PlayerInputManager.onSwipeRight -= OnSwipeRight;
+    }
     void Start()
     {
         
@@ -15,4 +31,25 @@ public class PlayerMovement : MonoBehaviour
     {
         
     }
+
+    #endregion
+
+    #region GetInput
+    private void OnSwipeUp()
+    {
+        Debug.Log("Swipe Up Player Movement");
+    }
+    private void OnSwipeDown()
+    {
+        Debug.Log("Swipe Down Player Movement");
+    }
+    private void OnSwipeLeft()
+    {
+        Debug.Log("Swipe Left Player Movement");
+    }
+    private void OnSwipeRight()
+    {
+        Debug.Log("Swipe Right Player Movement");
+    }
+    #endregion
 }
