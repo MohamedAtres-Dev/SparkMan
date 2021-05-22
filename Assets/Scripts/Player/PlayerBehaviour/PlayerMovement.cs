@@ -2,54 +2,57 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+namespace SparkBallGame
 {
-    #region Monobehaviour
+    public class PlayerMovement : MonoBehaviour
+    {
+        #region Monobehaviour
 
-    private void OnEnable()
-    {
-        PlayerInputManager.onSwipeUp += OnSwipeUp;
-        PlayerInputManager.onSwipeDown += OnSwipeDown;
-        PlayerInputManager.onSwipeLeft += OnSwipeLeft;
-        PlayerInputManager.onSwipeRight += OnSwipeRight;
-    }
+        private void OnEnable()
+        {
+            PlayerInputManager.onSwipeUp += OnSwipeUp;
+            PlayerInputManager.onSwipeDown += OnSwipeDown;
+            PlayerInputManager.onSwipeLeft += OnSwipeLeft;
+            PlayerInputManager.onSwipeRight += OnSwipeRight;
+        }
 
-    private void OnDisable()
-    {
-        PlayerInputManager.onSwipeUp -= OnSwipeUp;
-        PlayerInputManager.onSwipeDown -= OnSwipeDown;
-        PlayerInputManager.onSwipeLeft -= OnSwipeLeft;
-        PlayerInputManager.onSwipeRight -= OnSwipeRight;
-    }
-    void Start()
-    {
-        
-    }
+        private void OnDisable()
+        {
+            PlayerInputManager.onSwipeUp -= OnSwipeUp;
+            PlayerInputManager.onSwipeDown -= OnSwipeDown;
+            PlayerInputManager.onSwipeLeft -= OnSwipeLeft;
+            PlayerInputManager.onSwipeRight -= OnSwipeRight;
+        }
+        void Start()
+        {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        }
 
-    #endregion
+        // Update is called once per frame
+        void Update()
+        {
 
-    #region GetInput
-    private void OnSwipeUp()
-    {
-        Debug.Log("Swipe Up Player Movement");
+        }
+
+        #endregion
+
+        #region GetInput
+        private void OnSwipeUp()
+        {
+            Debug.Log("Swipe Up Player Movement");
+        }
+        private void OnSwipeDown()
+        {
+            Debug.Log("Swipe Down Player Movement");
+        }
+        private void OnSwipeLeft()
+        {
+            Debug.Log("Swipe Left Player Movement");
+        }
+        private void OnSwipeRight()
+        {
+            Debug.Log("Swipe Right Player Movement");
+        }
+        #endregion
     }
-    private void OnSwipeDown()
-    {
-        Debug.Log("Swipe Down Player Movement");
-    }
-    private void OnSwipeLeft()
-    {
-        Debug.Log("Swipe Left Player Movement");
-    }
-    private void OnSwipeRight()
-    {
-        Debug.Log("Swipe Right Player Movement");
-    }
-    #endregion
 }
