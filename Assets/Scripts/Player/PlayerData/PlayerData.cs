@@ -30,7 +30,7 @@ namespace SparkBallGame
         public float SparkAddedAmount { get => _sparkAddedAmount; set => _sparkAddedAmount = value; }
         public float SparkRemovedAmount { get => _sparkRemovedAmount; set => _sparkRemovedAmount = value; }
 
-        public void SetPlayerScore(int score)
+        public void CheckPlayerHighScore(int score)
         {
             if (score > _playerHighScore)
             {
