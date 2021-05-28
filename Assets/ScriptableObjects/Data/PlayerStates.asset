@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af02d6f1738adfe43b420af3adfee65d, type: 3}
   m_Name: PlayerStates
   m_EditorClassIdentifier: 
-  _movementSpeed: 200
+  _currentMovementSpeed: 0
+  _maxMovementSpeed: 1000
+  _minMovementSpeed: 200
   _jumpSpeed: 500
   _boosterSpeed: 10000

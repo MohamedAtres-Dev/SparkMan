@@ -49,7 +49,7 @@ namespace SparkBallGame
 
         private void FixedUpdate()
         {
-            rb.velocity = (new Vector2(_playerStates.MovementSpeed * Time.deltaTime , rb.velocity.y));
+            rb.velocity = (new Vector2(_playerStates.CurrentMovementSpeed * Time.deltaTime , rb.velocity.y));
 
             if (isSwipingUp)
             {

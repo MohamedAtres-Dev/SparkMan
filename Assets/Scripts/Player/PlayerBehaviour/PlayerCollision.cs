@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace SparkBallGame
 {
     public class PlayerCollision : MonoBehaviour
     {
+        public static UnityAction onPlayerDied = delegate { };
         /// <summary>
         /// The player need also to detect collectables so he can run effects and sound
         /// </summary>
@@ -26,6 +28,7 @@ namespace SparkBallGame
             var collideObject = collision.gameObject.GetComponent<Obstacle>();
             if (!collideObject) return;
 
+            onPlayerDied.Invoke();
             Debug.Log("Hitting Obstacle object");
             Debug.Log("Player Died");
         }
