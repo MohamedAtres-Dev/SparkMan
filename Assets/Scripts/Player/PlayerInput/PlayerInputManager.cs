@@ -126,6 +126,7 @@ namespace SparkBallGame
             {
                 Debug.Log("Swipe Right");
                 onSwipeRight.Invoke();
+
             }
         }
 
