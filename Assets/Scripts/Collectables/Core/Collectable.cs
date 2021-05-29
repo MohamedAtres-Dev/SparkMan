@@ -8,7 +8,7 @@ namespace SparkBallGame
     {
         public string collectableID;
         public AudioClip collectableSFX;
-        public ParticleSystem collectableEffect;
+        public GameObject collectableEffect;
 
         protected virtual void OnTriggerEnter2D(Collider2D collision)
         {

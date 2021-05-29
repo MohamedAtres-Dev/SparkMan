@@ -8,6 +8,13 @@ namespace SparkBallGame
     public class PlayerCollision : MonoBehaviour
     {
         public static UnityAction onPlayerDied = delegate { };
+        private AudioSource _playerAudioSource;
+
+        private void Start()
+        {
+            _playerAudioSource = GetComponent<AudioSource>();
+        }
+
         /// <summary>
         /// The player need also to detect collectables so he can run effects and sound
         /// </summary>
@@ -21,6 +28,8 @@ namespace SparkBallGame
             Debug.Log("Collectable Id " + triggerObject.collectableID);
 
             //TODO : Get their Audio Clip and Effects And play them on the player
+            _playerAudioSource.PlayOneShot(triggerObject.collectableSFX);
+            Instantiate(triggerObject.collectableEffect, collision.gameObject.transform.position, Quaternion.identity);
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
