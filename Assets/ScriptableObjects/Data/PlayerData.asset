@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f51c3d99a2911940abef719d0d7e61b, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  _playerHighScore: 0
-  _sparkFullBar: 0
-  _sparkyTime: 0
-  _startSparkAmount: 0
+  _playerHighScore: 12
+  _sparkFullBar: 1212
+  _sparkyTime: 10
+  _startSparkAmount: 11
   _sparkAddedAmount: 0
   _sparkRemovedAmount: 0
   _musicOn: 0
