@@ -15,7 +15,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: -1995932222675165359}
-  m_UserColorIndex: 0
+  m_UserColorIndex: 7
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -48,7 +48,11 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: cdf1d08fca160c34d9dee0c7b27614fc
+    name: Music
+  - guid: 3af530a4506c6764a8ee441659287c17
+    name: SoundFX
   m_AudioMixerGroupViews:
   - guids:
     - 5742a30f70b7c654fb1f29da54aef296

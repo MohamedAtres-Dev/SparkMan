@@ -18,6 +18,6 @@ MonoBehaviour:
   _startSparkAmount: 11
   _sparkAddedAmount: 0
   _sparkRemovedAmount: 0
-  _musicOn: 0
-  _soundOn: 0
+  _musicOn: 1
+  _soundOn: 1
   _isRemovedAds: 0

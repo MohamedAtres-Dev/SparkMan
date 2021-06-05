@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 namespace SparkBallGame
 {
@@ -10,7 +11,7 @@ namespace SparkBallGame
     {
         [SerializeField] GameObject _deathPanel;
         [SerializeField] GameObject _pausePanel;
-    
+
 
         private void OnEnable()
         {
@@ -20,21 +21,34 @@ namespace SparkBallGame
         {
             PlayerCollision.onPlayerDied -= OnPlayerDied;
         }
-        // Start is called before the first frame update
-        void Start()
-        {
 
+        public void OnPausePressed()
+        {
+            _pausePanel.SetActive(true);
+            Time.timeScale = 0f;
         }
 
-        // Update is called once per frame
-        void Update()
+        public void OnContinuePressed()
         {
-
+            _pausePanel.SetActive(false);
+            Time.timeScale = 1f;
         }
 
         public void OnPlayerDied()
         {
             _deathPanel.SetActive(true);
+        }
+        
+        public void OnHomePressed()
+        {
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(0);
+        }
+
+        public void OnRestartPressed()
+        {
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(1);
         }
     }
 }
