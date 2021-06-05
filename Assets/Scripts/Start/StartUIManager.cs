@@ -23,6 +23,7 @@ namespace SparkBallGame
         {
             Debug.Log("Start Game");
             SceneManager.LoadScene("Game");
+            GoogleAdMobController.Instance.HideBannerAd();
         }
     }
 }
