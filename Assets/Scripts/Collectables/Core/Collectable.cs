@@ -9,12 +9,14 @@ namespace SparkBallGame
         public string collectableID;
         public AudioClip collectableSFX;
         public GameObject collectableEffect;
+        protected GameObject player;
 
         protected virtual void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.gameObject.CompareTag("Player"))
             {
                 gameObject.SetActive(false);
+                
             }
         }
 
