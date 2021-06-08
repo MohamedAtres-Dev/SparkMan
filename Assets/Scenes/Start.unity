@@ -1908,6 +1908,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerData: {fileID: 11400000, guid: 536a3cc2e0e0ec346b0445e663a76bde, type: 2}
+  _saveValues:
+  - valueAsset: {fileID: 11400000, guid: 75fa1d02044908149b659bfdb13fba2e, type: 2}
+    saveKey: doubletimer
+  - valueAsset: {fileID: 11400000, guid: 08df999620dddac429f1d19730f8f330, type: 2}
+    saveKey: magnettimer
 --- !u!1 &772269070359381249
 GameObject:
   m_ObjectHideFlags: 0
